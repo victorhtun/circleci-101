@@ -1,8 +1,10 @@
+jobs: 
+  docker: 
+    - 
+      image: "circleci/ruby:2.4.1"
+  steps: 
+    - checkout
+    - 
+      run: "echo \"A first hello\""
 version: 2
-  jobs:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "A first hello"
 
