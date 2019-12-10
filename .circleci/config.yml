@@ -1,24 +1,23 @@
 version: 2
 jobs:
   one:
-    docker: 
+    docker:
       - image: "circleci/ruby:2.4.1"
-    steps: 
+    steps:
       - checkout
       - run: "echo \"A first hello\""
       - run: "sleep 25"
-  two: 
-    docker: 
-      - 
-        image: "circleci/ruby:2.4.1"
-    steps: 
+  two:
+    docker:
+      - image: "circleci/ruby:2.4.1"
+    steps:
       - checkout
       - run: "echo \"A more familiar hi\""
       - run: "sleep 15"
 version: 2
 workflows:
-  one_and_two: 
-    jobs: 
+  one_and_two:
+    jobs:
       - "one - two"
 
 
